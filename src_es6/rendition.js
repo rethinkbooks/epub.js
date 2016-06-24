@@ -5,7 +5,6 @@ import replace from './replacements';
 import Hook from './hook';
 import EpubCFI from './epubcfi';
 import Queue from './queue';
-import View from './view';
 import Views from './views';
 import Layout from './layout';
 import Map from './map';
