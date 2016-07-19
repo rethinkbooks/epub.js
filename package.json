@@ -1,0 +1,52 @@
+{
+  "name": "epubjs",
+  "version": "0.3.0",
+  "description": "Render Epubs",
+  "main": "/src/epub.js",
+  "repository": "https://github.com/futurepress/epub.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "gulp test"
+  },
+  "author": "fchasen@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "brfs": "^1.4.1",
+    "browserify": "^13.0.0",
+    "colors": "^1.1.2",
+    "connect": "^3.0.1",
+    "express": "^4.5.1",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.3.4",
+    "gulp-connect": "~3.1.1",
+    "gulp-jshint": "^2.0.0",
+    "gulp-markdown-docs": "^0.1.5",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-size": "^2.0.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp-util": "^3.0.0",
+    "jquery": "^2.1.4",
+    "mochify": "^2.14.3",
+    "morgan": "^1.1.1",
+    "optimist": "^0.6.1",
+    "phantomjs": "^2.1.3",
+    "portfinder": "^1.0.2",
+    "qunitjs": "^1.14.0",
+    "serve-static": "^1.3.1",
+    "sinon": "^1.17.2",
+    "uglify": "^0.1.5",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.6.1"
+  },
+  "dependencies": {
+    "jszip": "^2.5.0",
+    "rsvp": "^3.0.18",
+    "urijs": "^1.17.0",
+    "xmldom": "^0.1.22"
+  }
+}
