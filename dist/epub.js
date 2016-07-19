@@ -6705,7 +6705,7 @@ Contents.prototype.css = function(property, value) {
 Contents.prototype.viewport = function() {
   var width, height;
   var $doc = this.document.documentElement;
-  var $viewport = $doc.querySelector("[name=viewport");
+  var $viewport = $doc.querySelector("[name=viewport]");
 
   /**
   * check for the viewport size
