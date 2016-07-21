@@ -8758,9 +8758,18 @@ Scroll.prototype.format = function(view){
   page.style.width =  width + "px" || "auto";
   page.style.height =  height + "px" || "auto";
   
+  console.log("page: %o", page);
   page.style.overflow = "hidden";
+  var calc_width =  page.getBoundingClientRect();
+  console.log("width: %o", width);
+  console.log("calc-width", calc_width);
+  console.log("margin left %o", (width-calc_width));
+  console.log("iframe width %o", iFrame.style.width);
+  console.log("view %o", view);
+  if(!view.isRightPage){
+    iFrame.style.marginLeft = (Math.ceil(parseInt(iFrame.style.width) - parseInt(calc_width.width))) + "px";
+  }
   page.style.transformOrigin = "top left";
-  iFrame.style.width = iFrame.style.width / 2
   if (view.offsetRight) {
      page.style.transformOrigin = "top right";
      page.style.right = 0;
@@ -9881,6 +9890,8 @@ SingleViewManager.prototype.display = function(section, target){
     view2.element.style.top = 0;
     view2.element.style.left = view.width/2 + "px"
     view2.offsetRight = false;
+    //er-change
+    view2.isRightPage = true;
     this.add(view);
 
     return this.add(view2)
@@ -9965,6 +9976,7 @@ SingleViewManager.prototype.next = function(){
     // er-change
     view2.element.style.left = view.width/2 + "px"
     view2.offsetRight = false;
+    view2.isRightPage = true;
     this.add(view);
 
 		return this.add(view2)
@@ -10006,6 +10018,7 @@ SingleViewManager.prototype.prev = function(){
     view2.element.style.left = view.width/2 + "px"
     view2.offsetRight = false;
     view2.element.style.top = 0;
+    view2.isRightPage = true;
     this.add(view);
 
 		return this.add(view2)
