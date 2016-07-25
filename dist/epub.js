@@ -8758,14 +8758,8 @@ Scroll.prototype.format = function(view){
   page.style.width =  width + "px" || "auto";
   page.style.height =  height + "px" || "auto";
   
-  console.log("page: %o", page);
   page.style.overflow = "hidden";
   var calc_width =  page.getBoundingClientRect();
-  console.log("width: %o", width);
-  console.log("calc-width", calc_width);
-  console.log("margin left %o", (width-calc_width));
-  console.log("iframe width %o", iFrame.style.width);
-  console.log("view %o", view);
   if(!view.isRightPage){
     iFrame.style.marginLeft = (Math.ceil(parseInt(iFrame.style.width) - parseInt(calc_width.width))) + "px";
   }
