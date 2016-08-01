@@ -3183,7 +3183,7 @@ process.umask = function() { return 0; };
   p.href = function(href, build) {
     var key;
 
-    if (href === undefined) {
+    if (href === undefined || typeof href === "boolean") {
       return this.toString();
     }
 
