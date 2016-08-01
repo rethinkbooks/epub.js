@@ -3208,7 +3208,7 @@ process.umask = function() { return 0; };
     if (!_URI && _object && href.pathname !== undefined) {
       href = href.toString();
     }
-
+    console.log("HREF %o", href);
     if (typeof href === 'string' || href instanceof String) {
       this._parts = URI.parse(String(href), this._parts);
     } else if (_URI || _object) {
