@@ -9872,6 +9872,7 @@ SingleViewManager.prototype.display = function(section, target){
   view.element.style.position = "absolute";
   view.element.style.left = 0;
   view.element.style.top = 0;
+  wgxpath.install(view.window)
   // view.element.style.width = "50%";
   // view2.setAsRightPage();
   console.log("EP", this.settings.evenPages)
@@ -9886,6 +9887,7 @@ SingleViewManager.prototype.display = function(section, target){
     view2.offsetRight = false;
     //er-change
     view2.isRightPage = true;
+    wgxpath.install(view2.window)
     this.add(view);
 
     return this.add(view2)
